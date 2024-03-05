@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Music Library</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1 class="t-title">{{ album.title }}</h1>
+        
+<p class="t-release-year">Released: {{ album.release_year }}</p>
+<p class="t-artist">Artist: {{ artist.name }}</p>
+
+<form action="/albums/{{album.id}}/delete" method="post">
+    <input type="submit" value="Delete Album">
+</form>
+
+<a href="/albums">Back to all albums</a>
+    </body>
+</html>
